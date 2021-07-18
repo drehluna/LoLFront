@@ -1,0 +1,36 @@
+.SearchInput {
+    
+    width: 30em;
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #f4f4f8;
+}
+
+form {
+    display: flex;
+    align-items: center;
+
+    margin-top: 45px;
+    margin-left: 50px;
+}
+
+
+Button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: -50px;
+      
+}
+
+Button:hover {
+    transform: scale(0.95);
+      
+}
+
+Button:active {
+    transform: scale(0.8);
+}

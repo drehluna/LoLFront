@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { MainCard } from "./components/MainCard"
+import NameProvider from './contexts/Name'
+import "./styles/App.css"
 function App() {
+
+ 
+    // async function teste3 () {
+    //   let result = await account('ehonda')
+
+    //   console.log(result.rankeds[0])
+    // }
+
+    // teste3()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NameProvider>
+          <MainCard/>
+       </NameProvider>
     </div>
   );
 }
