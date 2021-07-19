@@ -16,9 +16,12 @@ export function Rank() {
     let currentrank = 'undefined'
     let UserExist = false
 
+    console.log(Name)
+    
 
     if (Name.rankeds) {
         if (Name.rankeds[0]) {
+            
             UserExist = true
             rank = Name.rankeds[0]['tier']
             win = Name.rankeds[0]['wins']
@@ -37,38 +40,89 @@ export function Rank() {
 
 
     return (
-        
+
         <>
-            {Name !== '' ? 
-            
-            <div className='Rank'>
-            {UserExist === true ? 
-            
-            <> 
-            
-            <div className='table'>
-            <span className='CurrentWrapper'>Current Rank <p className='currentRank'>{currentrank}</p></span>
-            </div>
-                <div className='Data'>
-                    <img className='RankImg' src={urlRank} />
-                    <h2>{rank}</h2>
-                    <p className='pointsUp'>{lp} LP</p>
+            {Name !== '' ?
+                <div className='WrapperRanks'>
+                    <div className='Rank'>
+                        {UserExist === true ?
+
+                            <>
+
+                                <div className='table'>
+                                    <span className='CurrentWrapper'>Current Rank</span>
+                                    <p className='currentRank'>{currentrank}</p>
+                                </div>
+
+
+                                <div className='Data'>
+                                    <img className='RankImg' src={urlRank} />
+                                    <h2>{rank}/{Name.rankeds[0].rank}</h2>
+
+
+                                </div>
+                                <div className='Points'><p className='pointsUp'>{lp} LP</p>
+                                    <p className='PointsUp2'>{win}W {loss}L({winrate2}%)</p></div>
+
+
+
+
+                            </>
+                            :
+                            <div className='UserNotExist'>
+                                <span>usuário não encontrado</span>
+                            </div>
+
+
+
+                        }
+
+                    </div>
+
+                    <div className='Rank'>
+                        {UserExist === true ?
+
+                            <>
+
+                                <div className='table'>
+                                    <span className='CurrentWrapper'>Current Rank</span>
+                                    <p className='currentRank'>{Name.rankeds[1].queueType}</p>
+                                </div>
+
+
+                                <div className='Data'>
+                                    <img className='RankImg' src={Name.rankeds[1].rankIcon} />
+                                    <h2>{Name.rankeds[1].tier}/{Name.rankeds[1].rank} </h2>
+
+
+                                </div>
+                                <div className='Points'><p className='pointsUp'>{Name.rankeds[1].leaguePoints} LP</p>
+                                    <p className='PointsUp2'>{Name.rankeds[1].wins}W {Name.rankeds[1].losses}L({parseFloat(Name.rankeds[1].winRate).toFixed(0)}%)</p></div>
+
+
+
+
+                            </>
+                            :
+                            <div className='UserNotExist'>
+                                <span>usuário não encontrado</span>
+                            </div>
+
+
+
+                        }
+                    </div>
                 </div>
-                <p className='PointsUp2'>{win}W {loss}L({winrate2}%)</p>
-                </>
+
                 :
-                <div className='UserNotExist'>
-                    <span>usuário não encontrado</span>
-                </div>}
 
-        </div>
 
-        :
 
-        <div>Busque um usuario</div>
-        
-        }
+
+                <div>Busque um usuario</div>
+
+            }
         </>
-        
+
     );
 }

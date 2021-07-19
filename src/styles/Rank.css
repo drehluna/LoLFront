@@ -1,62 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300&display=swap');
 
 
+.WrapperRanks {
+    display: flex;
+}
+
 .Rank {
     background-color: transparent;
     font-family: 'Roboto Mono';
-    width: 25em;
+    width: 28em;
     height: 15em;
     padding: 30px;
     border-radius: 16px;
     border: 2px solid #f4f4f8;
-}
-
-.Rank span {
-    font-size: 20px;
-    font-weight: bold;
+    display: flex;
+    margin-right: 30px;
 }
 
 .table {
-    padding: 5px;
-    margin-bottom: 10px;
+    display: flex;
+    height: 30px;
+}
+.table > span {
+    width: 120px;
+    margin-right: 5em;
 }
 
 .Data {
+    margin-left: -22em;
     display: flex;
     align-items: center;
+    margin-top: 3em;
 }
 
-.RankImg {
-    width: 120px;
-    border-radius: 50%;
-
-    margin-right: 35px;
+.Data > img {
+   width: 8em;
 }
+
 
 .pointsUp {
-    margin-left: 8px;
     color: #58CCB1;
+    font-weight: bold;
+    margin-left: -60px;
+}
+
+.Points {
+    margin-top: 6.3em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    margin-left: -160px;
 }
 
 .PointsUp2 {
-    margin-top: -40px;
-    margin-left: 10em;
-}
-
-
-.CurrentWrapper {
-    display: flex;
     
-    align-items: center;
-
-
-}
-
-.currentRank {
-    font-size: 10px;
-    margin-left: 90px;
-}
-
-.UserNotExist {
-    margin-left: 30px;
+    width: 30em;
+    
 }
