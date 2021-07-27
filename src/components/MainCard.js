@@ -8,6 +8,8 @@ export function MainCard () {
            <MenuLateral/>
             <RightMenu/>
             
+
+
         </div>
     );
 

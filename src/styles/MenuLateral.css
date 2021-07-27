@@ -4,7 +4,7 @@
     height: 100%;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
-    width: 20%;
+    width: 15em;
     background-color: #F8F9FD;
 }
 
@@ -39,4 +39,10 @@
 .Op span > img  {
     width: 20px;
     margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+    .Menu {
+        display: none;
+    }
 }

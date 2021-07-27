@@ -1,61 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300&display=swap');
 
 
-.WrapperRanks {
-    display: flex;
-}
+.NoFirstSearch {
 
-.Rank {
-    background-color: transparent;
-    font-family: 'Roboto Mono';
-    width: 28em;
-    height: 15em;
-    padding: 30px;
-    border-radius: 16px;
     border: 2px solid #f4f4f8;
-    display: flex;
-    margin-right: 30px;
+    border-radius: 8px;
+    padding: 30px 30px;
+
+    margin-bottom: 30px;
 }
 
-.table {
+.WrapperRank {
     display: flex;
-    height: 30px;
 }
-.table > span {
+
+.WrapperRank > div {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #f4f4f8;
+    border-radius: 8px;
+}
+
+.Perfil > .firstCircle {
+    
+
+    border: 5px solid linear-gradient(to right, #4FCC06, #72F821);;
+    
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+.Perfil .firstCircle > img {
     width: 120px;
-    margin-right: 5em;
-}
-
-.Data {
-    margin-left: -22em;
-    display: flex;
-    align-items: center;
-    margin-top: 3em;
-}
-
-.Data > img {
-   width: 8em;
+    border-radius: 50%;
+    padding: 0px;
+    margin: 0px;
 }
 
 
-.pointsUp {
-    color: #58CCB1;
-    font-weight: bold;
-    margin-left: -60px;
-}
 
-.Points {
-    margin-top: 6.3em;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
 
-    margin-left: -160px;
-}
 
-.PointsUp2 {
-    
-    width: 30em;
-    
+@media (max-width: 600px) {
+    .WrapperRank {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .WrapperRank > div {
+        margin-top: 30px;
+    }
 }

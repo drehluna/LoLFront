@@ -1,8 +1,18 @@
 .MainCard {
-    width: 90%;
+    min-width: 90%;
+    width: auto;
+    min-height: 90%;
     height: 90%;
     background-color: #FFFFFF;
     border-radius: 18px;
     display: flex;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+@media (max-width: 600px) {
+    .MainCard {
+        margin: 50px;
+        overflow: scroll;
+        
+    }
 }
