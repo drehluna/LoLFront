@@ -21,6 +21,11 @@
     border-radius: 8px;
 }
 
+.Perfil > .firstCircle > p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 .Perfil > .firstCircle {
     
 
@@ -30,6 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 
 }

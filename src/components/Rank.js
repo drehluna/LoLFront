@@ -73,7 +73,8 @@ export function Rank() {
                             <div className='Perfil'>
 
                                 <div className='firstCircle'>
-                                    <img src='overall-world.png' />
+                                    <img src={Name.profileIconId} />
+                                    <p>{Name.name}</p>
                                 </div>
 
                             </div>
