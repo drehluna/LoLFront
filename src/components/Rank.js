@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { UseName } from '../contexts/Name';
 import '../styles/Rank.css'
 
@@ -5,37 +6,45 @@ export function Rank() {
 
     const { Name } = UseName()
 
+    const [RankNum, setRank] = useState(0)
 
-    let rank = 'undefined'
-    let win = '0'
-    let loss = '0'
+
+    let ImageRank = ''
+    let RankName = ''
+    let RankLevel = ''
+    let LeaglePoints = ''
+
+    let wins = 0
+    let losses = 0
     let winrate = 0
-    let winrate2
-    let lp = 0
-    let urlRank = ''
-    let currentrank = 'undefined'
-    let UserExist = false
 
     console.log(Name)
 
-
     if (Name.rankeds) {
         if (Name.rankeds[0]) {
+        
+            console.log(RankNum)
 
-            UserExist = true
-            rank = Name.rankeds[0]['tier']
-            win = Name.rankeds[0]['wins']
-            loss = Name.rankeds[0]['losses']
-            winrate = Name.rankeds[0]['winRate']
-            winrate2 = parseFloat(winrate).toFixed(0)
-            lp = Name.rankeds[0]['leaguePoints']
-            urlRank = Name.rankeds[0]['rankIcon']
-            currentrank = Name.rankeds[0]['queueType']
-            console.log(Name)
+        ImageRank = Name.rankeds[RankNum].rankIcon
+        RankName = Name.rankeds[RankNum].tier
+        RankLevel = Name.rankeds[RankNum].rank
+        LeaglePoints = Name.rankeds[RankNum].leaguePoints
 
-
+        wins = Name.rankeds[RankNum].wins
+        losses = Name.rankeds[RankNum].losses
+        winrate = parseFloat(Name.rankeds[RankNum].winRate).toFixed(0)
 
         }
+    }
+
+   
+
+   
+
+    function onSelectEvent(event) {
+        const value = event.target.value
+        setRank(value)
+
     }
 
 
@@ -43,7 +52,6 @@ export function Rank() {
 
         <>
             {Name === '' ?
-
 
                 <div className='UserNotEnter'>
                     <div className='NoFirstSearch'>
@@ -53,11 +61,7 @@ export function Rank() {
 
                 </div>
 
-
-
-
-
-                : Name === '403' ?
+                : Name === 403 ?
 
                     <div className='UserNotEnter'>
                         <div className='NoFirstSearch'>
@@ -75,19 +79,30 @@ export function Rank() {
                                 <div className='firstCircle'>
                                     <img src={Name.profileIconId} />
                                     <p>{Name.name}</p>
+
                                 </div>
 
                             </div>
                             <div className='CurrentRank'>
                                 <div className='CurrentRank-TOP'>
-                                <h4>CurrentRank</h4>
+                                    <h4>CurrentRank</h4>
 
-                                <div className='CustomSelect'>
-                                    <select className='SelectRank'>
-                                        <option value='0'>RANKED_SOLO_5x5</option>
-                                        <option value="1">RANKED_FLEX_SR</option>
-                                    </select>
+                                    <div className='CustomSelect'>
+                                        <select onChange={onSelectEvent} className='SelectRank'>
+                                          {Name.rankeds.map((itens,index) => <option key={index} value={index} > {itens.queueType} </option>)}
+                                        </select>
+                                    </div>
                                 </div>
+
+                                <div className='CurrentRank-MIDLE'>
+                                    <img className='imgRank' src={ImageRank} />
+                                    <span>{RankName}</span>
+                                    <span>{RankLevel}</span>
+                                    <span>{LeaglePoints} LP</span>
+
+                                    <div className='Wins'>
+                                        <p>{wins}W {losses}L {winrate}%</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className='Favorite'>asd</div>
