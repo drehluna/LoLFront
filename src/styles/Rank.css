@@ -51,6 +51,25 @@
 
 
 
+.CurrentRank-TOP {
+    display: flex;
+    padding: 10px;
+   
+}
+
+.CurrentRank-TOP .CustomSelect {
+    margin-left: 50px;
+
+    
+}
+
+.SelectRank {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-family: 'Roboto Mono';
+}
+
 
 
 @media (max-width: 600px) {
@@ -61,5 +80,15 @@
 
     .WrapperRank > div {
         margin-top: 30px;
+    }
+
+    .CurrentRank-TOP {
+        display: block;
+
+    }
+
+    .CurrentRank-TOP .CustomSelect {
+        margin-left: 0px;
+        margin-top: 20px;
     }
 }

@@ -78,7 +78,18 @@ export function Rank() {
                                 </div>
 
                             </div>
-                            <div className='CurrentRank'>asd</div>
+                            <div className='CurrentRank'>
+                                <div className='CurrentRank-TOP'>
+                                <h4>CurrentRank</h4>
+
+                                <div className='CustomSelect'>
+                                    <select className='SelectRank'>
+                                        <option value='0'>RANKED_SOLO_5x5</option>
+                                        <option value="1">RANKED_FLEX_SR</option>
+                                    </select>
+                                </div>
+                                </div>
+                            </div>
                             <div className='Favorite'>asd</div>
                         </div>
 

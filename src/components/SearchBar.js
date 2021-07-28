@@ -17,7 +17,7 @@ export function SearchBar() {
     function OnSubmitEvent(event) {
         event.preventDefault();
         
-        GetData(event.target[0].value)
+        event.target[0].value !== '' ? GetData(event.target[0].value) : setName('')
         
     }
 
