@@ -1,21 +1,17 @@
 import { MainCard } from "./components/MainCard"
-import NameProvider from './contexts/Name'
+import NameProvider, { UseName } from './contexts/Name'
+import SpinnerProvider from "./contexts/Spinner";
 import "./styles/App.css"
 function App() {
 
- 
-    // async function teste3 () {
-    //   let result = await account('ehonda')
-
-    //   console.log(result.rankeds[0])
-    // }
-
-    // teste3()
+  
 
   return (
     <div className="App">
       <NameProvider>
+        <SpinnerProvider>
       <MainCard/>
+      </SpinnerProvider>
        </NameProvider>
     </div>
   );
