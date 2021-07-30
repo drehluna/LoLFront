@@ -16,7 +16,8 @@ export function SearchBar() {
         SetSpinner("NoFirstSearchSpinner")
         console.log('chamado')
         let resultAccount = await account(user)
-        setName(resultAccount)
+        
+        resultAccount === 404 ? setName('') : setName(resultAccount)
         
     }
     

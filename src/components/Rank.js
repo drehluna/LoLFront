@@ -70,7 +70,7 @@ export function Rank() {
 
                     <div className='UserNotEnter'>
                         <div className='NoFirstSearch'>
-                            <p>Infelizmente nossa API está fora do ar no momento. [403]</p>
+                            <p>Infelizmente nossa API está fora do ar no momento. [403/404]</p>
                         </div>
                     </div>
 
@@ -78,7 +78,7 @@ export function Rank() {
 
                     <div>
                         <Helmet>
-                            <title>Sumonner {Name.name}</title>
+                            <title>Sumonner {Name.name ? Name.name : 'Erro'}</title>
                         </Helmet>
                         <div className='WrapperRank'>
                             <div className='Perfil'>
@@ -96,7 +96,7 @@ export function Rank() {
 
                                     <div className='CustomSelect'>
                                         <select onChange={onSelectEvent} className='SelectRank'>
-                                            {Name.rankeds.map((itens, index) => <option key={index} value={index} > {itens.queueType} </option>)}
+                                            {Name.rankeds ? Name.rankeds.map((itens, index) => <option key={index} value={index} > {itens.queueType} </option>) : <option>Indisponivel</option>}
                                         </select>
                                     </div>
                                 </div>
