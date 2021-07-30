@@ -10,6 +10,10 @@
     margin-bottom: 30px;
 }
 
+.NoFirstSearch > p {
+    display: block;
+}
+
 .NoFirstSearch > div {
     display: none;
 }
@@ -67,6 +71,7 @@
 .Perfil > .firstCircle > p {
     margin-top: 20px;
     font-weight: bold;
+    font-family: 'Roboto Mono';
 }
 
 .Perfil > .firstCircle {
@@ -98,8 +103,8 @@
 
 .CurrentRank-TOP {
     display: flex;
-    padding: 10px;
-
+    
+    font-family: 'Roboto Mono';
     position: relative;
    
 }
@@ -163,6 +168,30 @@
     font-family: 'Roboto Mono';
     color: gray;
 }
+
+
+
+.Favorite .FavoriteTitle {
+    font-weight: bold;
+    font-family: 'Roboto Mono';
+    
+}
+
+.Favorite .MiddleFavorite {
+    display: flex;
+
+}
+
+.Favorite img {
+    margin-top: 10px        
+}
+
+.Favorite .FavoriteMiddleData {
+    font-family: 'Roboto Mono';
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
 
 @keyframes spin {
     from {
@@ -237,5 +266,16 @@
     .Wins {
         margin-left: 0px;
         margin-top: 30px;
+    }
+
+    .Favorite {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Favorite .MiddleFavorite {
+       display: flex;
+       flex-direction: column;
     }
 }

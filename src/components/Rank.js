@@ -44,9 +44,6 @@ export function Rank() {
     }
 
 
-
-
-
     function onSelectEvent(event) {
         const value = event.target.value
         setRank(value)
@@ -57,7 +54,7 @@ export function Rank() {
     return (
 
         <>
-        {/* <button onClick={() => setSpinner('NoFirstSearchSpinner')}>kjhdhkjfsd</button> */}
+       
             {Name === '' ?
 
                 <div className='UserNotEnter'>
@@ -72,7 +69,7 @@ export function Rank() {
                 : Name === 403 ?
 
                     <div className='UserNotEnter'>
-                        <div className={Spinner}>
+                        <div className='NoFirstSearch'>
                             <p>Infelizmente nossa API está fora do ar no momento. [403]</p>
                         </div>
                     </div>
@@ -115,7 +112,24 @@ export function Rank() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='Favorite'>asd</div>
+
+
+
+                            <div className='Favorite'>
+
+                                <div className='FavoriteTitle'>Favorite role</div>
+                                <div className='MiddleFavorite'>
+
+                                    <img src='https://inhouse.fracassi.tech/roles/SUP.png'/>
+
+                                    <div className='FavoriteMiddleData'>
+                                        <h4>Support</h4>
+                                        <br/>
+                                        <span>80%|Win Ratio 54%</span>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
 
                     </div>
